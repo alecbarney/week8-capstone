@@ -6,12 +6,25 @@ const light = document.querySelector('#light')
 const fire = document.querySelector('#fire')
 const ice = document.querySelector('#ice')
 
-
+let a = 0
+let b = 0
+let c = 0
 
 // card creation for ice, lightning and fire
 const allLightning = ()=>{
+    
     axios.get('http://localhost:5500/lightning')
     .then(res =>{ 
+        if(a === 1){
+            lightcontainer.style.display = ''
+            firecontainer.style.display = 'none'
+            icecontainer.style.display = 'none'
+        }else if(a === 0){
+
+            lightcontainer.style.display = ''
+            firecontainer.style.display = 'none'
+            icecontainer.style.display = 'none'
+
         for(let i=0; i <res.data.length; i++){
         const LightPokeCard = document.createElement('div')
         LightPokeCard.classList.add('Lpoke-card')
@@ -25,13 +38,23 @@ const allLightning = ()=>{
 
 
            lightcontainer.appendChild(LightPokeCard)
-        }
+           a = 1
+        }}
     })
 }
 
 const allFire = ()=>{
     axios.get('http://localhost:5500/fire')
     .then(res =>{ 
+        if(b === 1){
+            lightcontainer.style.display = 'none'
+            firecontainer.style.display = ''
+            icecontainer.style.display = 'none'
+        }else if(b === 0){
+        lightcontainer.style.display = 'none'
+        firecontainer.style.display = ''
+        icecontainer.style.display = 'none'
+
         for(let i=0; i <res.data.length; i++){
         const FirePokeCard = document.createElement('div')
         FirePokeCard.classList.add('Fpoke-card')
@@ -45,14 +68,23 @@ const allFire = ()=>{
 
 
            firecontainer.appendChild(FirePokeCard)
-        }
+           b = 1
+        }}
     })
 }
 
 const allIce = ()=>{
     axios.get('http://localhost:5500/ice')
     .then(res =>{ 
-        
+        if(c === 1){
+            lightcontainer.style.display = 'none'
+            firecontainer.style.display = 'none'
+            icecontainer.style.display = ''
+        }else if(c === 0){
+        lightcontainer.style.display = 'none'
+        firecontainer.style.display = 'none'
+        icecontainer.style.display = ''
+
         for(let i=0; i <res.data.length; i++){
         const IcePokeCard = document.createElement('div')
         IcePokeCard.classList.add('Ipoke-card')
@@ -66,11 +98,17 @@ const allIce = ()=>{
 
 
            icecontainer.appendChild(IcePokeCard)
-        }
+           c = 1
+        }}
     })
 }
+
+
+
+
 
 
 light.addEventListener('click', allLightning)
 fire.addEventListener('click', allFire)
 ice.addEventListener('click', allIce)
+
