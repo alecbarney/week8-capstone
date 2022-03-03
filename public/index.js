@@ -5,6 +5,7 @@ const lightcontainer = document.querySelector('#lightcontainer')
 const light = document.querySelector('#light')
 const fire = document.querySelector('#fire')
 const ice = document.querySelector('#ice')
+const fact = document.querySelector('#random')
 
 let a = 0
 let b = 0
@@ -15,7 +16,7 @@ const allLightning = ()=>{
     
     axios.get('http://localhost:5500/lightning')
     .then(res =>{ 
-        console.log(res.data)
+        
         if(a === 1){
             lightcontainer.style.display = ''
             firecontainer.style.display = 'none'
@@ -30,11 +31,11 @@ const allLightning = ()=>{
         const LightPokeCard = document.createElement('div')
         LightPokeCard.classList.add('Lpoke-card')
         
-           LightPokeCard.innerHTML = `<img id='card-image'src='${res.data[i].poke_img}'><div>Name: ${res.data[i].pokemon_name}</div>
-           <div>Type: ${res.data[i].pokemon_type}</div>
-           <div>Size: ${res.data[i].pokemon_size}</div>
-           <div>Color: ${res.data[i].pokemon_color}</div>
-           <div> Personality: ${res.data[i].pokemon_personality}</div>
+           LightPokeCard.innerHTML = `<img id='card-image'src='${res.data[i].poke_img}'><div id='inner-text'>Name: ${res.data[i].pokemon_name}</div>
+           <div id='inner-text'>Type: ${res.data[i].pokemon_type}</div>
+           <div id='inner-text'>Size: ${res.data[i].pokemon_size}</div>
+           <div id='inner-text'>Color: ${res.data[i].pokemon_color}</div>
+           <div id='inner-text'> Personality: ${res.data[i].pokemon_personality}</div>
            `
 
 
@@ -60,11 +61,11 @@ const allFire = ()=>{
         const FirePokeCard = document.createElement('div')
         FirePokeCard.classList.add('Fpoke-card')
 
-           FirePokeCard.innerHTML = `<img id='card-image' src='${res.data[i].poke_img}'><div>Name: ${res.data[i].pokemon_name}</div>
-           <div>Type: ${res.data[i].pokemon_type}</div>
-           <div>Size: ${res.data[i].pokemon_size}</div>
-           <div>color: ${res.data[i].pokemon_color}</div>
-           <div> Personality: ${res.data[i].pokemon_personality}</div>
+           FirePokeCard.innerHTML = `<img id='card-image' src='${res.data[i].poke_img}'><div id='inner-text'>Name: ${res.data[i].pokemon_name}</div>
+           <div id='inner-text'>Type: ${res.data[i].pokemon_type}</div>
+           <div id='inner-text'>Size: ${res.data[i].pokemon_size}</div>
+           <div id='inner-text'>color: ${res.data[i].pokemon_color}</div>
+           <div id='inner-text'> Personality: ${res.data[i].pokemon_personality}</div>
            `
 
 
@@ -90,11 +91,11 @@ const allIce = ()=>{
         const IcePokeCard = document.createElement('div')
         IcePokeCard.classList.add('Ipoke-card')
         
-           IcePokeCard.innerHTML = `<img  id='card-image' src='${res.data[i].poke_img}'><div>Name: ${res.data[i].pokemon_name}</div>
-           <div>Type: ${res.data[i].pokemon_type}</div>
-           <div>Size: ${res.data[i].pokemon_size}</div>
-           <div>color: ${res.data[i].pokemon_color}</div>
-           <div> Personality: ${res.data[i].pokemon_personality}</div>
+           IcePokeCard.innerHTML = `<img  id='card-image' src='${res.data[i].poke_img}'><div id='inner-text'>Name: ${res.data[i].pokemon_name}</div>
+           <div id='inner-text'>Type: ${res.data[i].pokemon_type}</div>
+           <div id='inner-text'>Size: ${res.data[i].pokemon_size}</div>
+           <div id='inner-text'>color: ${res.data[i].pokemon_color}</div>
+           <div id='inner-text'> Personality: ${res.data[i].pokemon_personality}</div>
            `
 
 
@@ -103,12 +104,19 @@ const allIce = ()=>{
         }}
     })
 }
+const randomFact = ()=>{
+    axios.get("http://localhost:5500/fact")
+    .then(function (response) {
+        const data = response.data;
+        alert(data);
+    })
+    
+}
 
 
 
 
-
-
+fact.addEventListener('click', randomFact)
 light.addEventListener('click', allLightning)
 fire.addEventListener('click', allFire)
 ice.addEventListener('click', allIce)

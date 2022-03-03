@@ -13,7 +13,11 @@ app.use(cors())
 
 app.post('/seed', seed)
 
+app.get('/fact', ctrl.pokeFact)
+
 app.get('/lightning', ctrl.displayLightning)
 app.get('/fire', ctrl.displayFire )
 app.get('/ice', ctrl.displayIce )
+
+
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
