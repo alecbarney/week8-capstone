@@ -15,6 +15,7 @@ const allLightning = ()=>{
     
     axios.get('http://localhost:5500/lightning')
     .then(res =>{ 
+        console.log(res.data)
         if(a === 1){
             lightcontainer.style.display = ''
             firecontainer.style.display = 'none'
@@ -34,7 +35,7 @@ const allLightning = ()=>{
            <div>Size: ${res.data[i].pokemon_size}</div>
            <div>Color: ${res.data[i].pokemon_color}</div>
            <div> Personality: ${res.data[i].pokemon_personality}</div>
-           <button>add to list</button>`
+           `
 
 
            lightcontainer.appendChild(LightPokeCard)
@@ -64,7 +65,7 @@ const allFire = ()=>{
            <div>Size: ${res.data[i].pokemon_size}</div>
            <div>color: ${res.data[i].pokemon_color}</div>
            <div> Personality: ${res.data[i].pokemon_personality}</div>
-           <button>add to list</button>`
+           `
 
 
            firecontainer.appendChild(FirePokeCard)
@@ -94,7 +95,7 @@ const allIce = ()=>{
            <div>Size: ${res.data[i].pokemon_size}</div>
            <div>color: ${res.data[i].pokemon_color}</div>
            <div> Personality: ${res.data[i].pokemon_personality}</div>
-           <button>add to list</button>`
+           `
 
 
            icecontainer.appendChild(IcePokeCard)
