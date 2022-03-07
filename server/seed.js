@@ -16,6 +16,7 @@ module.exports = {
         sequelize.query(`
         drop table if exists pokemon;
         
+
         CREATE TABLE pokemon(
             pokemon_id SERIAL PRIMARY KEY,
             poke_img VARCHAR(100),

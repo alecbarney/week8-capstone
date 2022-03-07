@@ -1,0 +1,128 @@
+body{
+    background: url('https://images3.alphacoders.com/154/154877.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+margin: 0;
+    
+}
+#field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+#field img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+#snow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+#snow img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+#sauna{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+#sauna img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+.ranch{
+    background-color: white;
+    color:white;
+    height: 400px;
+    width: 600px;
+    border-color: white;
+    border-style: solid;
+}
+.main{
+    width: 1250px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#txtbox{
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+#txtr{
+    text-align: left;
+    font-size: xx-large;
+    padding: 10px;
+}
+#txt{
+    text-align: left;
+    font-size: xx-large;
+    padding: 10px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:black;
+}
+#poke-pic{
+    height: 500px;
+    width: 700px;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+a:hover {
+    color: #848484;
+    cursor: pointer;
+}
+#test{
+    color:white
+}
+.page{
+    display: flex;
+}
+#p{
+    color: white;
+    text-decoration:solid;
+    font-weight: bolder;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: larger;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+    height: 400px;
+    width: 700px;
+  }
+  p{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+  #front{
+      margin: 25px;
+  }
+  #shining-pic{
+    height: 500px;
+    width: 700px;
+  }

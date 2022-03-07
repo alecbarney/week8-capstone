@@ -104,6 +104,8 @@ const allIce = ()=>{
         }}
     })
 }
+
+// random fact function
 const randomFact = ()=>{
     axios.get("http://localhost:5500/fact")
     .then(function (response) {
@@ -114,7 +116,7 @@ const randomFact = ()=>{
 }
 
 
-
+// event listeners
 
 fact.addEventListener('click', randomFact)
 light.addEventListener('click', allLightning)
