@@ -37,6 +37,12 @@ displayFire: (req, res)=>{
     .then(dbRes => res.status(200).send(dbRes[0]))
             .catch(err => console.log(err))
       },
+    //   displayAll: (req, res)=>{
+    //     sequelize.query(`
+    //     SELECT * from pokemon
+    //     `).then(dbRes => res.status(200).send(dbRes[0]))
+    //     .catch(err => console.log(err))
+    //   },
  pokeFact: (req, res)=>{
  const facts = ["Pikachu directly translates as 'Sparkly mouse noise",
         "Lots of Pokémon names are puns",

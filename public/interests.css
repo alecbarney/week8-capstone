@@ -45,6 +45,7 @@ margin: 0;
     color:white;
     height: 400px;
     width: 600px;
+    margin: 0px;
     border-color: white;
     border-style: solid;
 }
@@ -73,14 +74,15 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color:black;
+    height: 9vh;
+    background-color:white;
 }
 #poke-pic{
-    height: 500px;
-    width: 700px;
+    height: 125px;
+    width: 200px;
 }
 a {
-    color: #ffffff;
+    color: black;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -96,6 +98,8 @@ a:hover {
 }
 .page{
     display: flex;
+    margin-top: 15px;
+    margin-left: 15px;
 }
 #p{
     color: white;
@@ -108,16 +112,17 @@ a:hover {
     flex-direction:column;
     justify-content: center;
     text-align: center;
-    height: 400px;
+    height: 1200px;
     width: 700px;
   }
-  p{
+  #p-txt{
     background-color: rgba(0,0,0,.5);
     color: #fff;
     font-size: xx-large;
     display: flex;
     align-items: center;
     margin-left: 15px;
+    /* border-radius: 10%; */
   }
   #front{
       margin: 25px;
@@ -125,4 +130,44 @@ a:hover {
   #shining-pic{
     height: 500px;
     width: 700px;
+  }
+  #shiny{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #1ED760;
+    height: 48px;
+
+
+  }
+  #shiny:hover{
+  transform: scale(1.04);
+        background-color: #21e065;
+  }
+  #title{
+    color: white;
+    font-size: 75px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    border-radius: 10%;
+  }
+  #shiny-pic{
+      margin-top: 25px;
   }

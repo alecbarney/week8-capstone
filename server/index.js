@@ -15,6 +15,7 @@ app.post('/seed', seed)
 
 app.get('/fact', ctrl.pokeFact)
 
+// app.get('/all', ctrl.displayAll)
 app.get('/lightning', ctrl.displayLightning)
 app.get('/fire', ctrl.displayFire )
 app.get('/ice', ctrl.displayIce )
