@@ -55,7 +55,7 @@ margin: 0;
     flex-wrap: wrap;
 }
 #txtbox{
-    background-color: black;
+    background-color: rgba(0,0,0,.5);
     display: flex;
     align-items: center;
 }
@@ -68,6 +68,9 @@ margin: 0;
     text-align: left;
     font-size: xx-large;
     padding: 10px;
+    color: white;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-style: italic;
 }
 header {
     display: flex;
