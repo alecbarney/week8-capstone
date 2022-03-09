@@ -69,6 +69,7 @@ img{
 
 }
 #p{
+    position: relative;
     color: white;
     text-decoration:solid;
     font-weight: bolder;
@@ -182,5 +183,32 @@ a:hover {
 #front{
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+footer{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    width: 100%;
+    bottom: 0;
+    top:25vh;
+    background-color: white;
+}
+.footertitle{
+background-color: white;
+color: black;
+/* font-family: Arial, Helvetica, sans-serif; */
+font-weight: bold;
+}
+.fcont{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    font-size:medium;
+    margin-top: 5px;
+}
+.fdiv{
+    display: flex;
     flex-direction: column;
 }

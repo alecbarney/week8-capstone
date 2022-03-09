@@ -174,3 +174,31 @@ a:hover {
   #shiny-pic{
       margin-top: 25px;
   }
+  footer{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    width: 100%;
+    bottom: 0;
+    top:20vh;
+    background-color: white;
+}
+.footertitle{
+background-color: white;
+color: black;
+font-size:xx-large;
+/* font-family: Arial, Helvetica, sans-serif; */
+font-weight: bold;
+}
+.fcont{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    font-size:medium;
+    margin-top: 5px;
+}
+.fdiv{
+    display: flex;
+    flex-direction: column;
+}
